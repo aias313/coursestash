@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Course Stash
+                    <small>A Curated Directory of online learning</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+
+
+        <div class="row">
+         {% for item in categories %}
+            <div class="col-md-4 portfolio-item">
+                <a href="/listing/{{ item.name }}">
+                    <img class="img-responsive" src="https://source.unsplash.com/{{ item.image }}/1600x900" alt="">
+                </a>
+                <h3>
+                    <a href="/listing/{{ item.name }}" style="text-transform: capitalize" >{{ item.name }}</a>
+                </h3>
+                <p>{{ item.description }}.</p>
+            </div>
+             {%  if loop.index is divisibleby 3 %}
+                 <div class="row"></div>
+             {% endif %}
+
+         {% endfor %}
+
+{#            <div class="col-md-4 portfolio-item">#}
+{#                <a href="#">#}
+{#                    <img class=0"img-responsive" src="https://placekitten.com/g/700/400" alt="">#}
+{#                </a>#}
+{#                <h3>#}
+{#                    <a href="/listing/data">Data Science</a>#}
+{#                </h3>#}
+{#                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>#}
+{#            </div>#}
+{#            <div class="col-md-4 portfolio-item">#}
+{#                <a href="#">#}
+{#                    <img class="img-responsive" src="https://placekitten.com/g/700/400" alt="">#}
+{#                </a>#}
+{#                <h3>#}
+{#                    <a href="/listing/social">Social Media</a>#}
+{#                </h3>#}
+{#                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>#}
+{#            </div>#}
+{#        </div>#}
+        <!-- /.row -->
+{##}
+{#        <!-- Projects Row -->#}
+{#        <div class="row">#}
+{#            <div class="col-md-4 portfolio-item">#}
+{#                <a href="#">#}
+{#                    <img class="img-responsive" src="https://placekitten.com/g/700/400" alt="">#}
+{#                </a>#}
+{#                <h3>#}
+{#                    <a href="/listing/finacne">Finance</a>#}
+{#                </h3>#}
+{#                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>#}
+{#            </div>#}
+{#            <div class="col-md-4 portfolio-item">#}
+{#                <a href="#">#}
+{#                    <img class="img-responsive" src="https://placekitten.com/g/700/400" alt="">#}
+{#                </a>#}
+{#                <h3>#}
+{#                    <a href="lifestyle">Lifestyle</a>#}
+{#                </h3>#}
+{#                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>#}
+{#            </div>#}
+{#            <div class="col-md-4 portfolio-item">#}
+{#                <a href="#">#}
+{#                    <img class="img-responsive" src="https://placekitten.com/g/700/400" alt="">#}
+{#                </a>#}
+{#                <h3>#}
+{#                    <a href="/listing/art">Art</a>#}
+{#                </h3>#}
+{#                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#        <!-- Projects Row -->#}
+{#        <div class="row">#}
+{#            <div class="col-md-4 portfolio-item">#}
+{#                <a href="/listing/health">#}
+{#                    <img class="img-responsive" src="https://placekitten.com/g/700/400" alt="">#}
+{#                </a>#}
+{#                <h3>#}
+{#                    <a href="/listing/health">Health and Wellness</a>#}
+{#                </h3>#}
+{#                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>#}
+{#            </div>#}
+{#            <div class="col-md-4 portfolio-item">#}
+{#                <a href="#">#}
+{#                    <img class="img-responsive" src="https://placekitten.com/g/700/400" alt="">#}
+{#                </a>#}
+{#                <h3>#}
+{#                    <a href="/listing/Enterpreneurship">Enterpreneurship</a>#}
+{#                </h3>#}
+{#                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>#}
+{#            </div>#}
+{#            <div class="col-md-4 portfolio-item">#}
+{#                <a href="#">#}
+{#                    <img class="img-responsive" src="https://placekitten.com/g/700/400" alt="">#}
+{#                </a>#}
+{#                <h3>#}
+{#                    <a href="/listing/code">Learn to Code</a>#}
+{#                </h3>#}
+{#                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>#}
+{#            </div>#}
+{#        </div>#}
+{#        <!-- /.row -->#}
+{##}
+{#        <hr>#}
+{% endblock %}

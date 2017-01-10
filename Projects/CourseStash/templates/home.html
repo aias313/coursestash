@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/enternew">Add New Course</a>
+
+ <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Descripton</th>
+               <th>Address</th>
+               <th>Pin</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for course in Category %}
+               <tr>
+                  <td>{{ course.name }}</td>
+                  <td>{{ course.description }}</td>
+                  <td>{{ course.link }}</td>
+                  <td>{{ course.image }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+
+</body>
+</html>
